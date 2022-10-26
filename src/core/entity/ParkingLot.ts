@@ -10,4 +10,10 @@ export default class ParkingLot {
     this.openHour = openHour;
     this.closeHour = closeHour;
   }
+
+  isOpen(date: Date) {
+    const hour = date.getHours();
+
+    return hour >= this.openHour && hour <= this.closeHour;
+  }
 }
