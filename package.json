@@ -1,0 +1,19 @@
+{
+  "name": "financy-clean-arch",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "main": "tsc && node ./dist/main.js",
+    "test": "tsc && jest ./dist"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^29.2.0"
+  },
+  "dependencies": {
+    "jest": "^29.2.2"
+  }
+}
