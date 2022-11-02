@@ -22,4 +22,20 @@ describe("ParkingLot", () => {
 
     expect(parkingLotAfterEnter.occupiedSpaces).toBe(1);
   });
+
+  test("should be closed", async () => {
+    const parkingLotRepositoryMemory = new ParkingLotRepositoryMemory();
+
+    const enterParkingLot = new EnterParkingLot(parkingLotRepositoryMemory);
+    const getParkingLog = new GetParkingLot(parkingLotRepositoryMemory);
+    const parkingLotBeforeEnter = await getParkingLog.execute("shopping");
+
+    expect(parkingLotBeforeEnter.occupiedSpaces).toBe(0);
+
+    await enterParkingLot.execute(
+      "shopping",
+      "MMM-0001",
+      new Date("2021-03-01T123:00:00")
+    );
+  });
 });
