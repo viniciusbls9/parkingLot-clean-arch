@@ -16,6 +16,10 @@ export default class EnterParkingLot {
       throw new Error("The parking lot is closed");
     }
 
+    if (parkingLot.isFull()) {
+      throw new Error("The parking lot is full");
+    }
+
     await this.parkingLotRepository.saveParkedCar(
       parkedCar.code,
       parkedCar.plate,
