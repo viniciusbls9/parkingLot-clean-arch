@@ -6,7 +6,8 @@
   "scripts": {
     "main": "tsc && node ./dist/main.js",
     "test": "tsc && jest ./dist",
-    "express": "tsc && node ./dist/src/infra/http/express.js"
+    "express": "tsc && node ./dist/src/infra/http/express.js",
+    "hapi": "tsc && node ./dist/src/infra/http/hapi.js"
   },
   "keywords": [],
   "author": "",
